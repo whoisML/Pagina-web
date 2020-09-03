@@ -1,0 +1,92 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+Luis Enrique ML
+{% endblock %}
+
+
+{% block meta_contenido %}
+{%endblock%}
+
+
+{%block meta_claves%}
+{%endblock%}
+
+
+
+
+{% block barra_nav %}
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+	<div class="container">
+		<a class="navbar-brand js-scroll-trigger" href="#page-top">Luis Enrique ML</a>
+		<button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		Menu
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item mx-0 mx-lg-1">
+					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#publicaciones">Artículos</a>
+				</li>
+				{% block info %}
+				{% endblock %}
+			</ul>
+		</div>
+	</div>
+</nav>
+{% endblock %}
+
+
+
+
+
+{% block cabecera %}
+<header class="masthead bg-primary text-white text-center">
+	<div class="container d-flex align-items-center flex-column">
+
+		<img class="masthead-avatar mb-5" src="{% static 'img/avataaars.svg' %}"  alt="">
+		<h1 class="masthead-heading text-uppercase mb-0">Luis Enrique ML</h1>
+
+		<div class="divider-custom divider-light">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon">
+				<i class="fas fa-mobile-alt"></i>
+				<i class="fas fa-bug"></i>
+				<i class="fas fa-terminal"></i>
+				<i class="fas fa-database"></i>
+				<i class="fas fa-network-wired"></i>
+				<i class="fas fa-laptop"></i>
+				<i class="fas fa-server"></i>
+				<i class="fas fa-robot"></i>
+			</div>
+			<div class="divider-custom-line"></div>
+		</div>
+
+		<p class="masthead-subheading font-weight-light mb-0">Blog personal de sobre programación, seguridad informática y otros temas</p>
+
+	</div>
+</header>
+
+
+<section class="page-section" id="publicaciones">
+	<div class="container">
+		<div class="row">
+		{% for p in pub %}
+			<div class="col-lg-3 col-md-6 mb-4">
+				<div class="card h-100">
+					<img class="card-img-top" src="{% static 'img/Blog/'%}{{p.titulo}}/{{p.titulo}}.svgz" alt="">
+					<div class="card-body">
+						<h4 class="card-title">{{ p.titulo }}</h4>
+					</div>
+					<div class="card-footer">
+						<a href="{% url 'detalle_pub' pk=p.pk %}" class="btn btn-primary">Ir al post</a>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+</section>
+{% endblock %}

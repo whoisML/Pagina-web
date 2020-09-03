@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% block meta_contenido %}
+  <meta name="description" content="Contenido relacionado a la seguridad informática, programación, configuración e instalacion de software">
+  {% endblock %}
+
+  {%block meta_claves%}
+  <meta name="keywords" content="Seguridad informática, hacking, programación, configuración de software, software, hardware">
+  {%endblock%}
+
+
+  <meta name="author" content="Luis Enrique ML">
+  <meta name="copyright" content="Luis Enrique ML">
+  <meta name="resource-type" content="howto">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>
+  {% block titulo %}
+  {% endblock %}
+  </title>
+
+  <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" sizes="32x32">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  {% block barra_nav %}
+
+  {% block info%}
+  <li class="nav-item mx-0 mx-lg-1">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#info">Acerca de mí</a>
+  </li>
+  {%endblock%}
+
+
+  {% endblock %}
+
+
+  {% block cabecera %}
+  {% endblock %}
+
+
+
+
+
+  {% block blog %}
+  {% endblock %}
+
+
+
+
+
+
+
+
+  <!-- Pie de pagina -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+
+        <!-- Algun pie -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          
+        </div>
+
+        <!-- Iconos de enlaces a redes -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">En la Web</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-facebook-f"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/who.is.ml/">
+            <i class="fab fa-fw fa-instagram"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/whoisML">
+            <i class="fab fa-fw fa-github"></i>
+          </a>
+        </div>
+
+        <!-- Algun pie -->
+        <div class="col-lg-4">
+          
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'js/freelancer.min.js' %}"></script>
+
+</body>
+
+</html>
